@@ -1,5 +1,6 @@
 package com.company;
 
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -29,12 +30,19 @@ public class Main {
 
             switch (choice){
                 case 1:
-                    for(int i=0; i<list.size();i++){
-                        System.out.println("Pozycja "+ (i+1) + " " + list.get(i).toString());
+                    if(list.size()>0){
+                        for(int i=0; i<list.size();i++){
+                            System.out.println("Pozycja "+ (i+1) + " " + list.get(i).toString());
+                        }
+                        System.out.println();
+                    }else{
+                        System.out.println("Brak książek w bazie");
                     }
-                    System.out.println();
+
                     break;
                 case 2:
+
+
                     //String title, String author, String isbn, String publicationDate, int issueNumber
                     System.out.println("Tytuł:");
                     String title = sc.nextLine();
@@ -50,13 +58,15 @@ public class Main {
                     System.out.println();
                     break;
                 case 3:
+
                     System.out.println("Podaj nr książki którą chcesz usunąć: ");
-                    choice = sc.nextInt();
-                    list.remove((choice-1));
+                    int nDelete = sc.nextInt();
+                    list.remove((nDelete-1));
                     break;
             }
 
         }while(choice!=4);
     }
+
 
 }
