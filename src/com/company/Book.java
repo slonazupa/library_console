@@ -18,6 +18,14 @@ public class Book {
         this.issueNumber = 0;
     }
 
+    public Book(String title, String author, String isbn, String publicationDate, int issueNumber) {
+        this.title = title;
+        this.author = author;
+        this.isbn = isbn;
+        this.publicationDate = publicationDate;
+        this.issueNumber = issueNumber;
+    }
+
     @Override
     public String toString() {
         return "Book{" +
